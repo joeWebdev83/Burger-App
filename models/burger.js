@@ -17,6 +17,12 @@ var burgers = {
 			cb(res);
 		});
 	},
+	deleteOne: function(condition, cb){
+		orm.selectAll("burgers", condition, function(res){
+			cb(res);
+		});
+
+	}
 };
 
 module.exports = burgers;
